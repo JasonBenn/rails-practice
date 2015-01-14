@@ -1,6 +1,7 @@
 class TodosController < ApplicationController
   def index
     @todos = Todo.all
+    @subtask_count = Subtask.count
   end
 
   def create
@@ -38,5 +39,3 @@ class TodosController < ApplicationController
   end
 
 end
-
-    # render plain: params.inspect

@@ -1,2 +1,3 @@
 class Todo < ActiveRecord::Base
+  has_many :subtasks, dependent: :destroy
 end
