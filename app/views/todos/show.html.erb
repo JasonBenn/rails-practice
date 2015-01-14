@@ -1,5 +1,14 @@
 <h2>Todo:</h2>
-<p><%= @todo.title %></p>
-<p><%= @todo.description %></p>
+<p>Title: <%= @todo.title %></p>
+<p>Description: <%= @todo.description %></p>
+
+<% if @todo.subtasks.any? %>
+  <h3>Subtasks:</h3>
+  <ul>
+    <% @todo.subtasks.each do |subtask| %>
+      <li><%= subtask.description %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= link_to "Back", todos_path %>
