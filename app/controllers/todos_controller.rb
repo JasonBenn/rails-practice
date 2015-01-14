@@ -12,11 +12,11 @@ class TodosController < ApplicationController
     @todo = Todo.new
   end
 
-  def show
+  def edit
     @todo = Todo.find_by_id(params[:id])
   end
 
-  def edit
+  def show
     @todo = Todo.find_by_id(params[:id])
   end
 
